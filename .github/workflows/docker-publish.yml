@@ -37,7 +37,8 @@ jobs:
         id: step_one
         run: |
           repository=$(echo "${{ github.repository }}" | cut -d '/' -f 2)
-          echo "repository=${REPO}" >> "$GITHUB_ENV"
+          echo repository
+          echo "REPO=${repository}" >> "$GITHUB_ENV"
           
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
